@@ -11,11 +11,12 @@ s.listen(5)
 while True:
     c, addr = s.accept()
 
+    #Connection Message
     print('Got connection from ', addr)
 
     msg = c.recv(9500)
 
-    #If Check to see what message is being sent 
+    #If Check to see what message is being sent
     if msg.decode("utf-8") == "Hello":
         print("Hi")
     else:
